@@ -1,0 +1,38 @@
+{
+  "name": "voting-app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.9.4",
+    "npm": "3.10.10"
+  },
+  "main": "server.js",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-jwt": "^0.1.9",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.3.0",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.4",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbuckles/voting-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mbuckles/voting-app/issues"
+  },
+  "homepage": "https://github.com/mbuckles/voting-app#readme",
+  "description": ""
+}

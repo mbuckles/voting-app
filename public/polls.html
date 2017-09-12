@@ -1,0 +1,33 @@
+<div class="container-fluid">
+		<div class="main">
+      <h3>{{vm.title}}</h3>
+			<br>
+		</div>
+		<div class="polls">
+			<div class="buttons text-center">
+		    <a class="btn btn-success" href="/">Main</a> <a class="btn btn-success" href="/login">Login</a> <a class="btn btn-success" href="/register">Register</a> <a class="btn btn-success" href="/profile">Profile</a> <a class="btn btn-success" href="/polls">Add Polls</a>
+				<a class="btn btn-danger" ng-click="vm.logOut()">Logout</a>
+			</div>
+			<hr>
+			<h6>
+				<p>1. Pick a name/question for your poll and then add several options to vote on.</p>
+				<p>2  Create as many polls as you would like and select from the list below to see the results.</p>
+			</h6>
+			<br>
+			<input type="text" ng-model="vm.poll.name" class="form-control" placeholder="Poll Name/Question" style="width: 350px;">
+			<br>
+			<input type="text" ng-model="vm.poll.options[$index].name" class="form-control" placeholder="Poll Options" ng-repeat="poll in vm.poll.options track by $index" style="width: 350px; margin-bottom:10px">
+			<br>
+			<button ng-click="vm.addOption()" class="btn btn-warning btn-block" ng-hide="vm.poll.options.length === 5" style="width: 150px;">Add Poll Option</button>
+			<br>
+			<button ng-click="vm.addPoll()" class="btn btn-primary btn-block" style="width: 100px;">Add Poll</button>
+			<hr>
+			<ul>
+				<li ng-repeat="poll in vm.polls">
+					<a href="/poll/{{poll._id}}">
+						{{poll.name}}  -  Submitted by: {{poll.owner}}
+					</a>
+				</li>
+			</ul>
+		</div>
+</div>

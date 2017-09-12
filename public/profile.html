@@ -1,0 +1,25 @@
+<div class="container-fluid">
+		<div class="main">
+      <h3>{{vm.title}}</h3>
+		</div>
+		<div class="buttons text-center">
+	    <a class="btn btn-success" href="/">Main</a> <a class="btn btn-success" href="/login">Login</a> <a class="btn btn-success" href="/register">Register</a> <a class="btn btn-success" href="/polls">Add Polls</a> <a class="btn btn-success" href="/">Main Menu</a>
+			<a class="btn btn-danger" ng-click="vm.logOut()">Logout</a>
+	  </div>
+		<hr>
+		<h4>Welcome Back, {{vm.currentUser.name}}</h4>
+<br>
+<br>
+<p>Select your poll below or add a poll. All entries start with one vote.</p>
+<br>
+<div class="polllist">
+	<h4 style="text-decoration: underline; margin-left: 40px;">Poll List</h4>
+	<ul>
+		<li ng-repeat="poll in vm.polls">
+			<a href="/poll/{{poll._id}}">
+				{{poll.name}}
+			</a>
+		</li>
+	</ul>
+</div>
+</div>

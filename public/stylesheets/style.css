@@ -1,0 +1,55 @@
+body {
+  background: black;
+  font-family: "Marcellus SC";
+}
+h3, h4{
+  font-family: "Marcellus SC";
+  color: white;
+}
+ul {
+  font-size: 1.2em;
+}
+.main {
+  text-align: center;
+  background-color:  blue;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 3px;
+  width:600px;
+  margin: 10px auto;
+  color: white;
+}
+.buttons {
+  margin: 10px;
+}
+button.btn.btn-success.btn-block, button.btn.btn-primary.btn-block {
+    width: 100px;
+}
+.jumbotron {
+  background-image: url(http://www.facilityistanbul.com/wp-content/uploads/2014/02/digital-touch1.jpg);
+  height: 350px;
+  color: black;
+}
+.jumbotron h1, .jumbotron h2, .jumbotron p {
+  color: black;
+  font-family: "Marcellus SC";
+}
+div#piechart {
+  width: 900px;
+  height: 500px;
+  margin:0 auto;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid white;
+}
+p {
+  font-size: 1.3em;
+  color: white;
+}
+.form-control {
+  width: 300px;
+}

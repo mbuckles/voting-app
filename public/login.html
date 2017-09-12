@@ -1,0 +1,18 @@
+<div class="container-fluid">
+		<div class="main">
+      <h3>{{vm.title}}</h3>
+		</div>
+		<div class="buttons text-center">
+	    <a class="btn btn-success" href="/">Main</a> <a class="btn btn-success" href="/register">Register</a>
+		</div>
+		<div class="login">
+			<hr>
+			<h4 ng-if="vm.error">{{vm.error}}</h4>
+			<br>
+			<input type="text" ng-model="vm.user.name" class="form-control" placeholder="name" style="width: 350px;">
+			<br>
+			<input type="text" ng-model="vm.user.password" placeholder="password" class="form-control" style="width: 350px;">
+			<br>
+			<button class="btn btn-success" ng-click="vm.login()" ng-disabled="!vm.user.name || !vm.user.password">Login</button>
+		</div>
+		</div>

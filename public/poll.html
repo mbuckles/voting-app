@@ -1,0 +1,24 @@
+<div class="container-fluid">
+		<div class="main">
+			<h3>{{vm.title}}</h3>
+		</div>
+		<div class="buttons text-center">
+	    <a class="btn btn-success" href="/">Main</a> <a class="btn btn-success" href="/login">Login</a> <a class="btn btn-success" href="/register">Register</a> <a class="btn btn-success" href="/profile">Profile</a> <a class="btn btn-success" href="/polls">Add Polls</a>
+			 <a class="btn btn-danger" ng-click="vm.logOut()">Logout</a>
+		</div>
+		<hr>
+		<div id="piechart"></div>
+		<hr>
+		<h3>Poll created by : {{vm.owner}}</h3>
+		<button class="btn btn-danger" ng-click="vm.deletePoll()">Delete Poll</button>  <a class="btn btn-primary" ng-href="https://www.facebook.com/sharer/sharer.php?u={{vm.link}}"> <i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a> <a class="btn btn-primary" ng-href="http://twitter.com/share?url={{vm.link}}"><i class="fa fa-twitter" aria-hidden="true"></i>Share on Twitter</a>
+		<hr>
+		<div class="form-group">
+			<select ng-model="vm.selected" class="form-control">
+				<option ng-repeat="option in vm.poll" value="{{option._id}}">{{option.name}}</option>
+			</select>
+		</div>
+		<input type="text" ng-model="vm.option" class="form-control" placeholder="Add option">
+		<button ng-click="vm.addOption();" class="btn btn-primary btn-block" ng-disabled="!vm.option">Add option</button>
+		<br><br>
+		<button ng-click="vm.vote();" class="btn btn-success btn-block" ng-disabled="!vm.selected">Vote</button>
+</div>
