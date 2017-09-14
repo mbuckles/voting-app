@@ -53,3 +53,7 @@ p {
 .form-control {
   width: 300px;
 }
+a:hover{
+    color: #9bd4ef;
+    text-decoration: none;
+}

@@ -10,7 +10,7 @@
 		<div id="piechart"></div>
 		<hr>
 		<h3>Poll created by : {{vm.owner}}</h3>
-		<button class="btn btn-danger" ng-click="vm.deletePoll()">Delete Poll</button>  <a class="btn btn-primary" ng-href="https://www.facebook.com/sharer/sharer.php?u={{vm.link}}"> <i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a> <a class="btn btn-primary" ng-href="http://twitter.com/share?url={{vm.link}}"><i class="fa fa-twitter" aria-hidden="true"></i>Share on Twitter</a>
+		<button class="btn btn-danger" ng-click="vm.deletePoll()">Delete Poll</button>  <a class="btn btn-primary" ng-href="https://www.facebook.com/sharer/sharer.php?u={{vm.link}}" target="blank"> <i class="fa fa-facebook" aria-hidden="true" ></i> Share on Facebook</a> <a class="btn btn-primary" ng-href="http://twitter.com/share?url={{vm.link}}" target="blank"><i class="fa fa-twitter" aria-hidden="true" ></i>Share on Twitter</a>
 		<hr>
 		<div class="form-group">
 			<select ng-model="vm.selected" class="form-control">
